@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: violet;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+section{
+    display: flex;
+}
+.seccion{
+    background-color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#ingreso_Registro{
+    margin-top: 20px;
+}
+a:link, a:visited{
+    color: white;    
+    text-decoration: none;
+}
+.button{
+    padding: 12px;
+    background-color: black;
+    border: none;
+
+}
