@@ -1,0 +1,121 @@
+/*
+*
+*colores:hsl(274, 10%,27%), hsl(274,48%,94%), hsl(274,81%,56%), hsl(273,9%,46%), hsl(273,10%,76%)
+* fuentes         font-family: 'Roboto', sans-serif;    font-family: 'Ultra', serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ultra&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(274,81%,56%);
+    font-family: 'Roboto', sans-serif, 'Ultra', serif;
+    font-size: 1.3125rem;
+    transition: .4s;
+    /*
+    * Margin 0 y padding 0 quita todos los márgenes por defecto que tienen los d¡navegadores
+    * box-sizing: border-box hace que en el cálculo del tamañano de los elementos incluya el margen y el padding y no solo el contenido
+    *
+    */
+}
+
+header{  
+    display: flex;
+    height: 50vh;
+    justify-content: center;/*alinea el texto al centro*/
+    align-items: flex-end;
+    background-color: hsl(274,48%,94%);
+    padding: 0 3rem;
+    
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;    
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+    background-color: hsl(273,10%,76%) ; 
+     
+}
+
+h1{
+    font-family: 'Ultra', serif;
+    font-size: 3rem;
+}
+/*cuando varios elementos vana  llevar el mismo estilo pueden separarse por comas*/
+h1, h3{
+   color: hsl(274,81%,56%) ; 
+}
+
+.s-index{
+    display: flex;
+    justify-content: center;
+}
+/* cuando se va a aplicar un estilo a un elemento dentro de otro una de las maneras es con > o solo con espacio*/
+section>button a{    
+    text-decoration: none;
+    color: hsl(274,48%,94%) ;
+
+}
+button, .enviar{
+    border: none;
+    margin-top: 2rem;
+    background-color: hsl(274, 10%,27%);
+    padding: 1em 1em;
+    color: hsl(274,48%,94%) ;
+
+    
+}
+
+.form-group{  
+    width: min(90%,70.5rem);
+    display: flex;
+    position: absolute; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+   
+}
+/*Estilos para los label en general. Lo de transition es para cuando se cambie el tamaño de la pantalla el cambio de estilos que tiene no sea brusco*/
+label{
+    width: 100%;
+    transition: .4s;
+}
+label >h3{
+    text-align: center;
+}
+/*Estilos para los input con la clase campo*/
+.campo{
+    width:100%;
+    margin-bottom:1em;
+    border: 0;
+    border-bottom: 1.5px solid hsl(274,81%,56%);
+    background: none;
+    transition: .4s;
+    padding: 1rem;
+    
+}
+/*Esta instrucción hace que al presionar en algún inputo aparezca el border*/
+.campo:focus{
+    outline: hsl(274,81%,56%);
+    border: 1px solid hsl(274,81%,56%);
+}
+/*acá funciona más o menos el responsive*/
+@media only screen and (max-width: 600px)  {
+
+    body{
+        font-size: .9rem ;
+        transition: .4s;
+    }
+    .campo{
+            padding: .5em 0;
+            transition: .4s;
+        }
+    label{
+        width: 80%;
+        transition: .4s;
+    }
+}
