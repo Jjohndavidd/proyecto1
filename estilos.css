@@ -1,6 +1,20 @@
 /*fuentes         font-family: 'Roboto', sans-serif;    font-family: 'Ultra', serif;
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ultra&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif, 'Ultra', serif;;
+    font-size: 1.3125rem;
+    transition: .4s;
+    /*
+    * Margin 0 y padding 0 quita todos los márgenes por defecto que tienen los d¡navegadores
+    * box-sizing: border-box hace que en el cálculo del tamañano de los elementos incluya el margen y el padding y no solo el contenido
+    *
+    */
+}
 #pg-inicio{
     margin: 100px;
     background-color: #E0FFFF;
@@ -124,12 +138,14 @@ label{
 label >h3{
     text-align: center;
 }
+
 /*Estilos para los input con la clase campo*/
 .campo{
     width:100%;
     margin-bottom:1em;
     border: 0;
     border-bottom: 1.5px solid hsl(274,81%,56%);
+    font-family: inherit;
     background: none;
     transition: .4s;
     padding: 1rem;
