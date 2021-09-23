@@ -15,9 +15,10 @@
                   <label for="apellido">Apellido<input type="text" id="apellido"class="campo" required></label>
                   <label for="telefono">Teléfono<input type="tel" id="telefono" class="campo" required></label>
                   <label for="email">Email<input type="email" id="email" class="campo" required></label>
-                  <label for="contrasena">Contraseña <input type="password" id="contrasena" class="campo" required></label>
+                  <label for="contrasena">Contraseña <input type="password" id="contrasena" class="campo" required onchange="checkContraseña(this.value)";></label>
                   <input type="submit" id="btn-submit-form" value="Enviar" class="enviar">
               </form>
     </section>
+    <script src="forms.js"></script>
 </body>
 </html>
