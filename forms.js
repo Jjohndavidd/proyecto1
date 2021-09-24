@@ -2,6 +2,8 @@ const submit = document.getElementById("btn-submit-form");
 const contrasena = document.getElementById("contrasena");
 const email = document.getElementById("email");
 const telefono = document.getElementById("telefono");
+const nombre = document.getElementById("nombre");
+const apellido = document.getElementById("apellido");
 
 
 //se crea un evento de botón desde donde se va a envíar el email
@@ -19,6 +21,12 @@ function validacion(e){
     }
     if(checkTelefono(telefono)){//acá se llama la función checkTelefono que valida el campo del telefono
     }
+    if (checkNombre(nombre)){// Aca se llama la funcion checkNombre que valida el campo contraseña
+
+    }
+    if (checkApellido(apellido)){//Aca se llama la funcion checkApellido que valida el campo contraseña
+
+    }
     //si pasa todas las validaciones devuelve true
     return true
   
@@ -27,7 +35,7 @@ function validacion(e){
 
 //acá se crean las funciones específicas para cada campo
 function checkCorreo(valor){
-    var formatoEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var formatoEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;    
     if(valor.value.match(formatoEmail)){
     return true;
     }
@@ -49,7 +57,7 @@ function checkContrasena(valor){
 }
  
 function checkTelefono(valor){      
-    var formatoTelefono= /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    var formatoTelefono= /^\d{7}$/;   
     if(valor.value.match(formatoTelefono)){
         return true;
     }
@@ -57,8 +65,33 @@ function checkTelefono(valor){
         alert("Tel inválido");
         return false;
     }
+}
+function  checkNombre(valor){      
+    var formatoNombre= /^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{4,30}$/ ; 
+
+    if(valor.value.match(formatoNombre)){
+        return true;
+    }
+    else{
+        alert("Nombre inválido");
+        return false;
+    }
+}    
+function  checkApellido(valor){      
+    var formatoApellido= /^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{4,30}$/ ;
+    
+    if(valor.value.match(formatoApellido)){
+        return true;
+    }
+    else{
+        alert("Apellido inválido");
+        return false;
+    } 
+
 } 
 //acá va la exportación para usar las funciones desde otras aplicaciones
 module.exports ={checkContrasena};
 module.exports={checkCorreo};
-module.exports={checkTelefono}
+module.exports={checkTelefono};
+module.exports ={checkNombre};
+module.exports ={checkApellido};
