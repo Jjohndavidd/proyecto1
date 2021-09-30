@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="pg-inicio" lang="en">
+<html id="pg-inicio" lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,35 +8,111 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <img id="img_logo" src="css/psicologia (1).png" width="100" height="117"alt="logo">
-        <h1 id="logo"><strong>ASESORIAS PSICOLOGICAS</strong></h1>
-        <img id="imagen"src="https://jaikupsicologiavirtual.com/wp-content/uploads/2021/03/sofa_2.gif" width="500" height="600"alt="">
-    </div>
-    <div class="caja1">
-        <h4><strong>¿QUIENES SOMOS?</strong></h4>
-        <p><strong>Somos un grupo de profesionales enfocados a la evaluación,<br> análisis e intervención de la conducta humana,<br> con el propósito de apoyar, mejorar e implementar técnicas<br> que permitan optimizar la calidad de vida del individuo<br> así como facilitar e impulsar el desarrollo del talento humano.<br>Nuestro principal objetivo esta enfocado en el compromiso<br> y cumplimiento en nuestros tratamientos de manera eficaz y oportuna,<br> con herramientas de alta calidad y última tecnología, a través<br> de un método de evaluación,análisis, e intervención de la conducta<br> humana generando la satisfacción de nuestros clientes.</strong></p>
-    </div>
-    <section class="s-index">
-        <button type="button" id="btn-registrar"><a href="registro.html" id="enlace-registro">Registrarse</a></button>
-    </section>
-    <footer >
-        <div>
-            <ul id="contacto">
-                <li><strong>CONTACTOS:</strong></li>
-                <li><strong>Email:asesorias.22@gmail.com</strong></li>
-                <li><strong>WhatsApp: 3045226587</strong></li>
-                <li><strong>Ubicacion: Carrera 25A # 1A Sur - 45 </strong></li>
-                <li><strong>Medellin-Colombia</strong></li>
-            </ul>
+
+    <!--Header -->
+    <header class="contenedor-header">
+        <div class="col col-titulo">
+            <img id="img_logo" src="css/psicologia (1).png" alt="logo">
+            <h1 class="titulo">ASESORIAS PSICOLÓGICAS</h1>                
         </div>
-        <div class="redes">
-            <P><strong>SIGUENOS EN NUESTRAS <br>REDES SOCIALES</strong><br> 
-            <img src="css/facebook (1).png" alt="">
-            <img src="css/logotipo-de-instagram.png" alt="">
-            <img src="css/whatsapp.png" alt="">
-            </P>
+        <div class="contenedor">
+            
+            <div class="col col-reg">
+                <p class="titulo">Primera sesión de 60 minutos<strong> GRATIS</strong> y sin compromiso</p>
+                <a href="registro.html" id="enlace-registro">Agenda tu cita</a>
+                
+            </div>
+            
+            <div class="col img-header">
+                <img  src="https://jaikupsicologiavirtual.com/wp-content/uploads/2021/03/sofa_2.gif" alt=""> 
+            </div> 
+        </div>
+    </header>
+
+    <!--Sección principal-->
+    <div class="contenedor-main">
+        <div class="contenedor">
+            
+            <h1 class="titulo">¿QUIENES SOMOS?</h1>
+            <p>Somos un grupo de profesionales enfocados a la evaluación, 
+                análisis e intervención de la conducta humana, con el propósito de apoyar, mejorar e implementar técnicas 
+                que permitan optimizar la calidad de vida del individuo 
+                así como facilitar e impulsar el desarrollo del talento humano.
+                Nuestro principal objetivo esta enfocado en el compromiso
+                y cumplimiento en nuestros tratamientos de manera eficaz y oportuna, 
+                con herramientas de alta calidad y última tecnología, a través 
+                de un método de evaluación,análisis, e intervención de la conducta 
+                humana generando la satisfacción de nuestros clientes.</p>
+        </div>        
+    </div>
+
+    <!--Formulario-->
+
+    <section class="contenedor-registro">
+        <div class="contenedor">
+
+            <form action="" id="form-registro">
+                <div>
+                    <label for=""><h3>Registro</h3> </label>
+                </div>
+                
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text"  id="nombre" class="campo" required minlength="4" maxlength="30">
+                    <div class="error"></div>
+                </div>
+                
+                <div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido"class="campo" required minlength="4" maxlength="30">
+                    <div class="error"></div>
+                </div>
+                
+                <div>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" class="campo" required minlength="7" maxlength="7">
+                    <div class="error"></div>
+                </div>
+                
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="campo" required placeholder="ejemplo@ejemplo.com">
+                    <div class="error"></div>
+                </div>
+                
+                <div>
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" class="campo" required minlength="8">
+                    <div class="error"></div>
+                </div>
+                
+                <input type="submit" id="btn-submit-form" value="Enviar" class="enviar">
+            </form>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="contenedor-footer">
+        <div class="contenedor">
+
+            <div>
+                <ul id="contacto">
+                    <li>CONTACTOS:</li>
+                    <li>Email:asesorias.22@gmail.com</li>
+                    <li>WhatsApp: 3045226587</li>
+                    <li>Ubicacion: Carrera 25A # 1A Sur - 45 </li>
+                    <li>Medellin-Colombia</li>
+                </ul>
+            </div>
+            <div class="redes">
+                <P><strong>SIGUENOS EN NUESTRAS <br>REDES SOCIALES</strong><br> 
+                    <img src="css/facebook (1).png" alt="">
+                    <img src="css/logotipo-de-instagram.png" alt="">
+                    <img src="css/whatsapp.png" alt="">
+                </P>
+            </div>
         </div>
     </footer>
+    <script src="prueba1.js"></script>
 </body>
 </html>

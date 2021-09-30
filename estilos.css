@@ -1,160 +1,215 @@
-/*fuentes         font-family: 'Roboto', sans-serif;    font-family: 'Ultra', serif;
-*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato&display=swap');
 
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif, 'Ultra', serif;;
+    font-family: 'Lato', sans-serif;
     font-size: 1.3125rem;
-    transition: .4s;
+    font-weight: 700;
+    background-color: #E0FFFF;
+    
     /*
     * Margin 0 y padding 0 quita todos los márgenes por defecto que tienen los d¡navegadores
     * box-sizing: border-box hace que en el cálculo del tamañano de los elementos incluya el margen y el padding y no solo el contenido
     *
     */
 }
-#pg-inicio{
-    margin: 100px;
-    background-color: #E0FFFF;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+.titulo{
+    font-family: 'Anton', sans-serif;
+    color: #244B5E;
 }
-#logo{
-    text-align: center;
-    color: black;
-    padding:10px;
-    text-size-adjust: 50px;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 0;
-    margin-bottom: 0;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 80px;
-    float: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#img_logo{
-    text-align: center;
-    float: left;
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-bottom: 0;
-}
-#imagen{
-    margin-top: 0;
-}
-.caja1{
-    margin-top: 0;
-    margin-right: 50px;
-    display:block;
-    color: black;
-    background-color: transparent;;
-    text-align: left;
-    border: 5px solid white;
-    font-size:20px ;
-    position: absolute; right: 5%;
-    position: absolute;top: 35%;
+h1{
+    font-size: 2rem;
+    font-weight: 700;
     
 }
-#enlace-registro{
-    text-decoration: none;
-    background-color: #f0d4f0;
-    padding: 2px;
-    text-align: center;
+.col p{
+    font-size: 2.8rem;
 }
-#btn-registrar{
-    background-color: #f0d4f0;
-    padding: 10px;
-    position:absolute; right: 22%;
-    position: absolute;top: 30%;
-    border: 0;
-    margin: 400px;
-    margin-right: 60px;
-    border: 2px solid white;
-}
-#contacto{
-    color: black;
-    text-decoration: none;
-    list-style: none;
-    position:absolute;top:100%;
-    background-color: transparent;
-    display: inline;
-    position:absolute;right:38%;
-    font-size: 20px;
-    padding-top: 10px;
-    padding: 30px;
-    padding-bottom: 21px;
-    margin-right: 0;
-}
-.redes{
-    padding-top: 0;
-    padding-bottom: 0;
-    color: black;
-    text-decoration: none;
-    list-style: none;
-    position:absolute;top:103%;
-    position:absolute;right:20%;
-    font-size: 20px;
-    display: inline-block;
-    margin-right: 0;
-    margin-left: 0;
+/*header*/
+.contenedor-header{
+
+
+    justify-content: center;
+    background-color: #95D5F5;
+    
 }
 .contenedor{
-    width: 100vw;
-    height: 100vh;    
+    width: 90%;
+    max-width: 1600px;
     display: flex;
     position: relative;
-    justify-content: center;
-    align-items: center; 
-    background-color: hsl(273,10%,76%) ; 
+    margin: 0 auto;
+    justify-content:space-between;
 }
-.enviar{
-    border: none;
-    margin-top: 2rem;
-    background-color: hsl(274, 10%,27%);
-    padding: 1em 1em;
-    color: hsl(274,48%,94%) ;
+.col-titulo{    
+    display: flex;
+    margin-left: 3.5em;
+}
+.col-reg, .img-header{
+    width: 50%;
+    
+}
+
+.img-header{
+    text-align: right;
+    
+}
+.img-header img{
+    width: 70%;
+    
+}
+
+.col-reg a{
+    
+    background-color: #244B5E;
+    color: #95D5F5;
+    text-decoration: none;   
+    border-radius: 5px; 
+    margin:1.5em;
+    padding: .5em;
+}
+.col-reg p{
+    background-color: rgba(255, 255, 255, 0.342);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: rgb(66, 65, 65);
+    border-radius: 3px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    border-left: 5px solid #50585C;
+    padding: 1em 3em 1rem 1em; 
+    margin-top: 3em;
+
+}
+
+/*footer*/
+.contenedor-footer{
+    background-color: #50585C;
+}
+
+
+@media(max-width: 380px){
+/* layaout Header*/
+
+.contenedor-header{
+    display:flex;
+    flex-direction: column;
+    background-color: #95D5F5;
+    padding-bottom:.5em ;
+    z-index:-1;
+    
+}
+
+
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    z-index: 1;
+
+    
+}
+
+.col-titulo{ 
+    display: flex; 
+    align-self: center;
+    width: 90%; 
+    justify-content: space-around;
+    margin-left:0;  
+
+}
+.col-reg{
+    width: 100%;
+    z-index:2 ;
+}
+
+.img-header{
+
+    width: 100%;
+    position: absolute;
+    z-index:1;
   
     
 }
-  
-.form-group{  
-    width: min(90%,70.5rem);
-    display: flex;
-    position: absolute; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-/*Estilos para los label en general. Lo de transition es para cuando se cambie el tamaño de la pantalla el cambio de estilos que tiene no sea brusco*/
-label{
-    width: 100%;
-    transition: .4s;
-}
-label >h3{
-    text-align: center;
+
+.col-reg a{
+    font-size: .85rem ;
+    background-color: #244B5E;
+    color: #95D5F5;
+    text-decoration: none;   
+    border-radius: 5px; 
+    margin:1.5em;
+    padding: .5em;
+    
 }
 
-/*Estilos para los input con la clase campo*/
-.campo{
-    width:100%;
-    margin-bottom:1em;
-    border: 0;
-    border-bottom: 1.5px solid hsl(274,81%,56%);
-    font-family: inherit;
-    background: none;
-    transition: .4s;
-    padding: 1rem;
+.col-reg p{
+    background-color: rgba(255, 255, 255, 0.719);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: rgb(66, 65, 65);
+    border-radius: 3px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    border-left: 3px solid #50585C;
+    margin:4em 3em 1em 1em;
+    padding: 1em 2em 1rem 1em; 
+    font-size: 1.1rem;
+
+    
 }
-/*Esta instrucción hace que al presionar en algún inputo aparezca el border*/
-.campo:focus{
-    outline: hsl(274,81%,56%);
-    border: 1px solid hsl(274,81%,56%);
+
+img{
+    max-width: 100%;
 }
-/*acá funciona más o menos el responsive*/
-@media only screen and (max-width: 600px)  {
+#img_logo{
+    max-width: 6vh;
+
+}
+
+.contenedor-main{
+    background-color: #53AEDB;
+    z-index:5;
+}
+/*Tipografía*/
+h1{
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+}
+
+p{
+    font-weight:900;
+    color: #50585C;
+}
+
+/*Formulario*/
+.contenedor-registro{
+    width: 100%;
+    background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+  }
+
+  .error{
+      color: red;
+  }
+
+  /* Footer*/
+
+.contenedor-footer{
+    background-color: #50585C;
+    
+}
+
+
 }
