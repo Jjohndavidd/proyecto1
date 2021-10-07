@@ -1,3 +1,5 @@
+/*fuentes  
+*/
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato&display=swap');
 
 body{
@@ -5,8 +7,8 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    font-size: 1.3125rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 300;
     background-color: #E0FFFF;
     
     /*
@@ -15,93 +17,196 @@ body{
     *
     */
 }
+
+/***************
+Tipografía
+***************/
 .titulo{
     font-family: 'Anton', sans-serif;
     color: #244B5E;
+    font-size: 1.2rem;
+}
+.titulo, .parrafo-header-texto, .h1-header-texto{
+    font-family: 'Anton', sans-serif;
+}
+.parrafo-header-texto{
+    font-size: 1.5rem;
+    color: #53AEDB;
+    text-shadow: 0.1em 0.1em 0.2em rgba(12, 12, 12, 0.925);
+}
+
+ nav a{
+    color: #50585C
+}
+.h1-header-texto{
+    color:white;
+    font-size: 2rem;
 }
 h1{
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 700;
     
 }
-.col p{
-    font-size: 2.8rem;
-}
-/*header*/
-.contenedor-header{
-
-
-    justify-content: center;
-    background-color: #95D5F5;
-    
-}
-.contenedor{
-    width: 90%;
-    max-width: 1600px;
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    justify-content:space-between;
-}
-.col-titulo{    
-    display: flex;
-    margin-left: 3.5em;
-}
-.col-reg, .img-header{
-    width: 50%;
-    
+.contenedor-footer h1{
+    color: #53AEDB;
 }
 
-.img-header{
-    text-align: right;
-    
-}
-.img-header img{
-    width: 70%;
-    
-}
-
-.col-reg a{
-    
-    background-color: #244B5E;
+a{
+    font-size: .85rem ;
     color: #95D5F5;
-    text-decoration: none;   
-    border-radius: 5px; 
-    margin:1.5em;
-    padding: .5em;
+    text-decoration: none; 
 }
-.col-reg p{
-    background-color: rgba(255, 255, 255, 0.342);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    color: rgb(66, 65, 65);
-    border-radius: 3px;
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    border-left: 5px solid #50585C;
-    padding: 1em 3em 1rem 1em; 
-    margin-top: 3em;
-
+p{
+    color: #244B5E;
+}
+small, small a{
+    font-size: .50rem;
+}
+.volver a{
+    font-weight: 700;
+    font-size: .9rem;
 }
 
-/*footer*/
-.contenedor-footer{
-    background-color: #50585C;
+/*******************
+ Header
+ ********************/
+
+.custom-shape-divider-bottom-1633077270 { /* efecto de olas en la imagen del background. Requiere que el contenedor donde está ubicado sea relativo*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
 }
 
+.custom-shape-divider-bottom-1633077270 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.2px);
+    height: 100px;
+    z-index: -1;
+}
 
-@media(max-width: 380px){
-/* layaout Header*/
+.custom-shape-divider-bottom-1633077270 .shape-fill {
+    fill: #53AEDB;
+}
 
-.contenedor-header{
+header{
+    position: relative;
+    
+    
+}
+.wrap-header{
     display:flex;
     flex-direction: column;
     background-color: #95D5F5;
     padding-bottom:.5em ;
     z-index:-1;
+    background-image: url('https://jaikupsicologiavirtual.com/wp-content/uploads/2021/03/sofa_2.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+@media (min-width: 600px) {
+    header, .wrap-header{
+        min-height: 100vh;
+        
+    }
+    .custom-shape-divider-bottom-1633077270 svg{
+        width: calc(130% + 1.2px);
+        height: 350px;
+    }
+    .titulo{
+        font-size: 2.5em;
+    }
+    .header-texto a{
+        font-size: 2em;
+    }
     
 }
+.header-titulo{ 
+    display: flex;
+    flex-direction: column; 
+    align-self: center;
+    width: 90%; 
+    justify-content: space-between;
+    margin-left:0; 
+    padding-bottom: 0;
+    z-index: 900;
 
+}
+nav{
+    text-align: center;    
 
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding: 0;
+    justify-content: center;
+
+}
+nav li{
+    list-style:none;
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: 700;
+    padding: .24em 0;
+}
+
+.header-titulo-nombre{
+    display: flex;
+}
+.cont-img{
+    padding-top: .5em;
+    padding-right: .5em;
+}
+.img_logo{
+   min-width:6vh;
+}
+
+@media (min-width: 600px){
+    .header-titulo{
+        flex-direction: row;
+        text-align: center;
+        
+    }
+    .header-titulo-nombre .img_logo{
+        align-self: flex-start;
+        padding-top: .5em;
+
+    }
+    .header-titulo-nombre h1{
+        
+        font-size: 1.7rem;       
+    
+    }
+    nav ul{
+        flex-direction: row;
+        align-items: center;
+        margin: 1em;
+
+    
+    }
+    nav li{
+        margin-left: 1em;
+    }
+    .nav a{
+        padding: 0 .24em;
+        margin: 10em;
+    }
+}
+
+.header-texto{
+    width: 100%;
+    z-index:2 ;
+}
 .contenedor{
     width: 90%;
     margin: 0 auto;
@@ -109,107 +214,243 @@ h1{
     position: relative;
     flex-direction: column;
     z-index: 1;
-
+    
     
 }
 
-.col-titulo{ 
-    display: flex; 
-    align-self: center;
-    width: 90%; 
-    justify-content: space-around;
-    margin-left:0;  
-
+.parrafo-header-texto{
+    border-left: 3px solid burlywood;
+    margin-top:4em; 
+    margin-bottom: 0;
+    padding-left: .5em;
 }
-.col-reg{
-    width: 100%;
-    z-index:2 ;
+.h1-header-texto{
+    margin-top:0;
+    padding-left: .5em;
+    color: #d85454;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.788);
 }
-
-.img-header{
-
-    width: 100%;
-    position: absolute;
-    z-index:1;
-  
-    
-}
-
-.col-reg a{
-    font-size: .85rem ;
-    background-color: #244B5E;
-    color: #95D5F5;
-    text-decoration: none;   
+.header-texto a{
+    background-color: #244B5E;  
     border-radius: 5px; 
-    margin:1.5em;
+    margin-bottom:1.5em;
+    margin-left: 3em;
     padding: .5em;
+    box-shadow: 0 0 15px rgba(14, 24, 34, 0.918);
+   
     
 }
+@media(min-width: 600px){
+    .contenedor, .header-titulo{
+        max-width: 1200px;
+    }
 
-.col-reg p{
-    background-color: rgba(255, 255, 255, 0.719);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    color: rgb(66, 65, 65);
-    border-radius: 3px;
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    border-left: 3px solid #50585C;
-    margin:4em 3em 1em 1em;
-    padding: 1em 2em 1rem 1em; 
-    font-size: 1.1rem;
-
+    .parrafo-header-texto{
+        margin-top: .2em;
+        font-size: 4em;
+      
+      }
+      .h1-header-texto{
+        font-size: 7em;
+        margin-bottom: .2em;
     
+        
+    }
+    .header-texto a{
+        margin-left: 5em;
+    }
+}
+@media(min-width: 800px){
+    .parrafo-header-texto{
+        margin-top: .7em;
+        font-size: 4em;
+      
+      }
+      .h1-header-texto{
+        font-size: 7em;
+        margin-bottom: .5em;
+    
+        
+    }
+    .header-texto a{
+        margin-left: 10em;
+    }
+}
+@media (min-width: 1200px){
+    .parrafo-header-texto{
+        margin-top: 1em;
+    }
+    .header-texto a{
+
+        margin-left: 20em;
+    }
 }
 
-img{
-    max-width: 100%;
-}
-#img_logo{
-    max-width: 6vh;
+/**********
+main
+************/
 
-}
 
 .contenedor-main{
     background-color: #53AEDB;
     z-index:5;
 }
-/*Tipografía*/
-h1{
-    font-size: 1.2rem;
-    font-weight: 700;
+.contenedor-main h1{
+    text-align:right ;
+}
+.psicologos{
+    width: 100% ;
+}
+.volver{
     
+    align-self: flex-end;
+    padding-bottom: .5em;
 }
 
-p{
-    font-weight:900;
-    color: #50585C;
+
+  /***************************
+  características del servicio
+  *****************************/
+
+.caracteristicas-columna{
+    background-color: rgba(255, 255, 255, 0.514);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: rgb(66, 65, 65);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(8,7,16,0.6);
+    text-align: center;
+    padding: .4em;
+    margin-bottom: 1em;
+}
+.img-caracteristicas{
+    width: 100%;
+    max-width: 20vw;
 }
 
-/*Formulario*/
+@media (min-width: 600px){
+    .titulo-widget{
+        font-size: 1.2em;
+    }
+    .seccion-quienes-somos{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1em;
+
+    }
+
+    .quienes-somos{
+        width: 45%;
+    
+
+    }
+    .quienes-parrafo{
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 3em  2em  3em 0 ;       
+        border-right: burlywood 3px solid;
+      
+    }
+    .quienes-imagen {
+        margin-left: 1em;
+    }
+    .contenedor-main h1{
+        text-align:center ;
+    }
+
+    .titulo-main{
+        width: 100%;
+        text-align: center;
+        margin: 1em;
+    }
+    .caracteristicas-servicio{
+       display: flex;
+       justify-content: space-between;
+       align-items: stretch;
+       margin: 0;
+      
+    }
+    .caracteristicas-columna{
+        width: 25%;
+        padding: 1em;
+        margin-bottom: 2em;
+        min-height: 5em;
+    }
+    .img-caracteristicas{
+        max-width: 5vw;
+    }
+}
+
+/***************
+Formulario
+****************/
 .contenedor-registro{
     width: 100%;
     background-color: white;
+    border: indigo 1px solid;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 400px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 50px;
-  }
+    width: 100%;
+    border: rgb(26, 26, 8) 1px solid;
+  
+}
+label{
+    display: block;
+    border: hotpink 1px solid;
+    margin-bottom: .5em;
+}
+
+form div{
+
+    border: olive 1px solid;
+    margin-bottom: .5em;
+}
+.contenedor{
+    border: lawngreen 1px solid;
+}
+form input{
+   width: inherit;
+}
+
+form div input{
+    width:97.5%;
+}
+
 
   .error{
       color: red;
   }
 
-  /* Footer*/
+  /***************** 
+  Footer
+  ******************/
 
-.contenedor-footer{
-    background-color: #50585C;
+footer{
+    background-color: #244B5E;
     
 }
-
+footer h1{
+    padding-bottom: .5em ;
+    border-bottom: 3px solid burlywood;
+}
+.contenedor-footer{
+    text-align: center;
+    align-items: center;
 
 }
+.img-redes{
+    width: 100%;
+    min-width: 40px;
+    padding: 1em;
+}
+.cont-img-redes{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 600px){
+   
+}
+
