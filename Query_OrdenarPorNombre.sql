@@ -1,0 +1,1 @@
+SELECT CONCAT(nombre," ",apellido) AS 'Usuario', telefono AS 'Contacto', correo AS 'e-mail' FROM `usuarios` ORDER BY nombre;

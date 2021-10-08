@@ -25,9 +25,10 @@
   
 // }
 //acá se crean las funciones específicas para cada campo
+
 var nombre = document.getElementById("nombre");
 function  checkNombre(nombre){   
-    debugger;   
+    debugger; 
     if(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{4,30}$/.test(nombre)){
         return true;
     }
@@ -35,7 +36,8 @@ function  checkNombre(nombre){
         return false;
     }
 }
-// module.exports.checkNombre=checkNombre;
+module.exports.checkNombre=checkNombre;
+
 
 var apellido = document.getElementById("apellido");
 function  checkApellido(apellido){ 
@@ -48,11 +50,11 @@ function  checkApellido(apellido){
         return false;
     } 
 }
-// module.exports.checkApellido=checkApellido;
+module.exports.checkApellido=checkApellido;
+
 
 var telefono = document.getElementById("telefono");
-function checkTelefono(telefono){  
-
+function checkTelefono(telefono){
     debugger;
     if(/^\d{7}$/.test(telefono)){
         return true;
@@ -61,11 +63,11 @@ function checkTelefono(telefono){
         return false;
     }
 }
-// module.exports.checkTelefono=checkTelefono;
+modile.exports.checkTelefono=checkTelefono;
+
 
 var email = document.getElementById("email");
 function checkCorreo(email){
-
     debugger;
     if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
     return true;
@@ -74,11 +76,12 @@ function checkCorreo(email){
         return false;
     }
 }
-// module.exports.checkCorreo=checkCorreo;
+
+module.exports.checkCorreo=checkCorreo;
+
 
 var contrasena = document.getElementById("contrasena");
 function checkContrasena(contraseña){
-
     debugger;
     if(/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/.test(contraseña)){
         return true;
@@ -88,5 +91,6 @@ function checkContrasena(contraseña){
         return false;
     }
 }
-// module.exports.checkContrasena=checkContrasena;
+
+module.exports.checkContrasena=checkContrasena;
 
