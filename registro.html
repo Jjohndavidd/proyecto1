@@ -9,17 +9,17 @@
 </head>
 <body>
     <section class="contenedor">
-              <form action="" id="form-registro" class="form-group">
+              <form action="configuracion/conexion.php" id="form-registro" class="form-group" method="POST">
                   <label for=""><h3>Registro</h3> </label>
-                  <label for="nombre">Nombre<input type="text"  id="nombre" class="campo" required onchange="checkNombre(this.value)"></label>
-                  <label for="apellido">Apellido<input type="text" id="apellido"class="campo" required onchange="checkApellido(this.value)"></label>
-                  <label for="telefono">Teléfono<input type="tel" id="telefono" class="campo" required onchange="checkTelofono(this.value)"></label>
-                  <label for="email">Email<input type="email" id="email" class="campo" required onchange="checkCorreo(this.value)"></label>
-                  <label for="contrasena">Contraseña <input type="password" id="contrasena" class="campo" required onchange="checkContrasena(this.value)";></label>
-                  <input type="submit" id="btn-submit-form" value="Enviar" class="enviar" onclick="agregarRegistro()">
+                  <label for="nombre">Nombre<input type="text"  id="nombre"  class="campo" name="nombre"required onchange="checkNombre(this.value)"></label>
+                  <label for="apellido">Apellido<input type="text" id="apellido"  class="campo" name="apellido"  required onchange="checkApellido(this.value)"></label>
+                  <label for="telefono">Teléfono<input type="tel" id="telefono"  class="campo" name="telefono" required onchange="checkTelofono(this.value)"></label>
+                  <label for="email">Email<input type="email" id="email"  class="campo" name="email" required onchange="checkCorreo(this.value)"></label>
+                  <label for="contrasena">Contraseña <input type="password" id="contrasena"  class="campo" name="contraseña" required onchange="checkContrasena(this.value)";></label>
+                  <input type="submit" id="btn-submit-form" value="Enviar" class="enviar">
               </form>
     </section>
     <script src="form.js"></script>
-    <script src="registro.js"></script>
+    <!-- <script src="registro.js"></script> -->
 </body>
 </html>
