@@ -1,6 +1,19 @@
 let registros = [];
-let rescaptcha = 100;
-let valor = document.getElementById('captcha').value;
+
+
+function login(){
+    const correo = document.getElementById("correo").value; 
+    const contrasena = document.getElementById("contrasena").value;
+    const valor = document.getElementById('captcha').value;
+    let email;
+    let pass;
+    if((email= registros.some(e => e.correo == correo)) && (pass = registros.some(e => e.contrasena == contrasena)) && (validarCAPTCHA(valor))){
+
+             return true;
+        
+    }
+        return false;
+} 
 
 function agregarRegistro(){
     let registro = document.getElementsByTagName("input");
@@ -15,37 +28,16 @@ function agregarRegistro(){
     registros.push(datosUsuario); 
     console.log(registros);
 } 
-function login(){
-    const correo = document.getElementById("correo").value; 
-    const contrasena = document.getElementById("contrasena").value;
-    let email;
-    let pass;
-    if(email= registros.find(e => e.correo == correo)){
 
-        if(pass = registros.find(e => e.contrasena == contrasena)){
-          
-            if(validarCAPTCHA(valor)){
-
-            
-            }         
-        } 
-
-    }
-    return false;
-} 
-
-
-
-function validarCAPTCHA(valor){
-    valor = document.getElementById('captcha').value;
-    valor=Number(valor);
-    if(valor===rescaptcha){
+function validarCAPTCHA(valor) {
+    if (Number(valor) === 1000) {
       return true;
-    } 
-    return false;
-  }
+    } else {
+      return false;
+    }
+}
 
-module.exports.registros=registros;
-module.exports.agregarRegistro=agregarRegistro;
-module.exports.validarCAPTCHA=validarCAPTCHA;
-module.exports.login=login
+module.exports.login = login;
+module.exports.registros = registros;
+module.exports.validarCAPTCHA = validarCAPTCHA;
+module.exports.agregarRegistro = agregarRegistro;
