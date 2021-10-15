@@ -1,18 +1,25 @@
-let registros = [];
+let registros = [{correo:"juan@gmail.com", contrasena: "SecurePassword123"}];
 
 
 function login(){
-    const correo = document.getElementById("correo").value; 
-    const contrasena = document.getElementById("contrasena").value;
-    const valor = document.getElementById('captcha').value;
-    let email;
-    let pass;
-    if((email= registros.some(e => e.correo == correo)) && (pass = registros.some(e => e.contrasena == contrasena)) && (validarCAPTCHA(valor))){
+  const correo = document.getElementById("correo").value; 
+  const contrasena = document.getElementById("contrasena").value;
+  const valor = document.getElementById('captcha').value;
+  let email;
+  let pass;
+  if((email= registros.find(e => e.correo == correo)) && (pass = registros.find(e => e.contrasena == contrasena))){
 
-             return true;
-        
-    }
-        return false;
+    if(validarCAPTCHA(valor)){
+  
+      
+                    
+        return true;
+     } 
+
+  }          
+  
+  return false;
+  
 } 
 
 function agregarRegistro(){
