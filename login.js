@@ -1,4 +1,20 @@
 let registros = [];
+
+
+function login(){
+    const correo = document.getElementById("correo").value; 
+    const contrasena = document.getElementById("contrasena").value;
+    const valor = document.getElementById('captcha').value;
+    let email;
+    let pass;
+    if((email= registros.some(e => e.correo == correo)) && (pass = registros.some(e => e.contrasena == contrasena)) && (validarCAPTCHA(valor))){
+
+             return true;
+        
+    }
+        return false;
+} 
+
 function agregarRegistro(){
     let registro = document.getElementsByTagName("input");
         
@@ -11,7 +27,17 @@ function agregarRegistro(){
     }
     registros.push(datosUsuario); 
     console.log(registros);
-}   
+} 
 
-module.exports.registros=registros;
-module.exports.agregarRegistro=agregarRegistro;
+function validarCAPTCHA(valor) {
+    if (Number(valor) === 1000) {
+      return true;
+    } else {
+      return false;
+    }
+}
+
+module.exports.login = login;
+module.exports.registros = registros;
+module.exports.validarCAPTCHA = validarCAPTCHA;
+module.exports.agregarRegistro = agregarRegistro;

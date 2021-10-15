@@ -500,10 +500,28 @@ footer h1{
 login
 *********/
 .cont-login{
-  border: black 1px solid;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+}
+.captcha{
+    display: flex;
+    justify-content:space-between ;
+}
+
+#captcha{
+    width: 25%;
+    margin-left: .5em;
+}
+
+
+.cont-login form{
+    z-index: 900;
+}
+.shape-login svg{
+    width: calc(180% + 2px);
+    height: 600px;
 
 }
